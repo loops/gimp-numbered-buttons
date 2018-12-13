@@ -1,35 +1,41 @@
-Create copies of identical "buttons", except each is uniquely numbered
+Create copies of identical "buttons", except each is uniquely numbered.
+
+First you create a template to make a round button image, or whatever you like.
+Along with this template you include a text layer styled in any manner you want.
+You then use this script to create new layers, each one containing a uniquely
+numbered button built from your template  The template text-layer will be
+automatically incremented after each button created.
 
 Basic usage
 -----------
 
 1. Build your button template using the normal Gimp tools:
 
-  · Create a layer group named "All buttons", to contain all the elements below
-    · Create a second layer group named "Button", as the first child of the "All buttons" layer group
+  · Create a layer-group named "All buttons", to contain all the elements below
+    · Create a second layer-group named "Button", as the first child of the "All buttons" layer-group
       · Underneath "Button" create as many image layers as you like to build up a pleasing button image
           - Make sure to "Crop to content" each layer
-      · Also underneath "Button" create a text layer on top of all the image layers you create
+      · Also underneath "Button" create a text layer on top of all the image layers
           - Put the number "1" (or any number really) as the content of this text layer
           - Use whatever font and positioning you like
               (often a fixed box, with centered justification works best)
 
-2.  Move this template to the first place on your background image where you'd like a button placed
+2.  Move this template to the first place on your background image where you'd like a button
 
   · The easiest way to do this is to choose the Move Tool, and enable "Move the active layer" mode
-  · Then make the "Button" layer group the active layer
+  · Then make the "Button" layer-group the active layer
   · You can then drag-and-drop all the layers underneath the "Button" group as a single package
 
 3.  Run the script to create a Button at this location
   
   · Choose "Filters -> Simple Buttons" from the menu.
       - A new layer will be created in this location with the button as it appeared in your template
-      - The text of the template will have it's number incremented automatically by 1
+      - The text of the template will have its number automatically incremented by 1
       - The template will be directly above the new button, so you will have to move it
 
 4.  Make as many more buttons as you like
 
   · Drag and drop the template to the next place you want a numbered button
-      - The button you created previously will remain behind at the old location
+      - The button you just created will remain behind at the old location
   · Create the next button
       - Instead of using the menu, you can just use the keyboard shortcut "CTRL-F"
